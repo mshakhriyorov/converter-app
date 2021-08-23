@@ -1,13 +1,16 @@
 {
-  "name": "converter-app",
+  "name": "converter",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
     "bootstrap": "5.1.0",
+    "browserlist": "1.0.1",
+    "create-react-app": "4.0.3",
     "node-sass": "6.0.1",
     "npm": "7.21.0",
+    "npm-install-checks": "4.0.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-scripts": "4.0.0",
