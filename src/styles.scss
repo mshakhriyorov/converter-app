@@ -1,22 +1,70 @@
-.App {
-  font-family: sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+
+body{
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  background: #c8cbce;
+
+
+h1{
+  margin: 4vw auto 8vw ;
+  text-align: center;
+}  
+
+.box {
+  background: #e9ecef;
+  background-position: bottom;
+  background-size: cover;
+  padding: 4vw;
+  width: 500px;
+  transition: 0.3s linear;
+
+  &:hover{
+    background: #bcc3ca;
+  }
+  
 
   input {
     padding: 5px; 
     margin-right: 5px;
+    border-radius: 5px;
+    border: none;
+
     &:focus{
       outline: none;
+      border: none;
+      padding: 6px;
     }
   }
 
-  select{
-    padding:5px;
-    cursor: pointer;
-  }
 
+  select{
+    padding:8px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+
+    &:focus{
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #000;
+      padding: 6px;
+    }
+  }
+}
+
+.btn {
+  margin-top: 15px;
+}
 
 }
+
+h4{
+  margin: 4vw auto;
+}
+
 .list{
   display: flex;
   flex-direction: row;
@@ -24,9 +72,48 @@
 
   ul{
     list-style: none;
+    
+
+    .currency{
+      position: relative;
+      
+      span{
+        position: absolute;
+        right: -40px;
+        top: -20px;
+        font-size: 30px;
+        display: none;
+      }
+    }
+
+    li{
+      background: yellow;
+      margin-top: 5px;
+      width: 100%;
+      padding: 10px;
+      
+
+      &:hover{
+        span {
+          display: block;
+          cursor: pointer;
+        }
+      }
+    }
 
     &:nth-child(2){
       font-style: italic;
     }
+  }
+}
+
+.upper{
+  background: green;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+
+  &:hover{
+    color: yellow;
   }
 }

@@ -1,11 +1,17 @@
 import React from "react";
-// import Converter from './Converter';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Converter from "./Converter";
 import ConvertedList from "./ConvertedList";
 
 const App = () => {
   return (
     <>
-      <ConvertedList />
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Converter} />
+          <Route path="/list" component={ConvertedList} />
+        </Switch>
+      </Router>
     </>
   );
 };

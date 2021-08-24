@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
-import "./styles.scss";
 import Currency from "./Currency";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles.scss";
+import  { Link } from 'react-router-dom';
 
 const BASE_URL =
   "https://api.fastforex.io/fetch-all?api_key=fcef4aa979-108fc950bf-qyan8f";
@@ -54,7 +56,7 @@ function Converter() {
 
   return (
     <>
-      <h1>Convert</h1>
+      <h1>Real-time currency converter</h1>
       <Currency
         currency={currency}
         selectedCurrency={fromCurrency}
@@ -62,7 +64,6 @@ function Converter() {
         onChangeAmount={handleFromAmountChange}
         amount={fromAmount}
       />
-      <div className="equals">=</div>
       <Currency
         currency={currency}
         selectedCurrency={toCurrency}
@@ -70,6 +71,7 @@ function Converter() {
         onChangeAmount={handleToAmountChange}
         amount={toAmount}
       />
+      <Link to="/list" className="btn btn-info">Click to see the whole list of currency rate</Link>
     </>
   );
 }
